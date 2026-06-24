@@ -1,0 +1,24 @@
+﻿# Build output
+KouboAgent_api_keys_v9.exe
+*.exe
+
+# Runtime/Generated
+output/
+_internal/
+
+# IDE
+.vs/
+.vscode/
+*.suo
+*.user
+*.log
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Installer output
+installer_output/
+
+# API keys (contains secrets)
+api_config.json

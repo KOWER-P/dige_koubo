@@ -1,0 +1,8 @@
+﻿{
+  "deepseek_api_key": "YOUR_DEEPSEEK_API_KEY",
+  "minimax_api_key": "YOUR_MINIMAX_API_KEY",
+  "chanjing_app_id": "YOUR_CHANJING_APP_ID",
+  "chanjing_secret_key": "YOUR_CHANJING_SECRET_KEY",
+  "chanjing_person_id": "",
+  "zhiling_key": "YOUR_ZHILING_KEY"
+}
