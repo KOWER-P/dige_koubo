@@ -1,10 +1,8 @@
-﻿# Build output
+﻿# 编译产物（根目录 exe）
 KouboAgent_api_keys_v9.exe
-*.exe
 
-# Runtime/Generated
+# 运行时输出
 output/
-_internal/
 
 # IDE
 .vs/
@@ -17,8 +15,20 @@ _internal/
 Thumbs.db
 .DS_Store
 
-# Installer output
-installer_output/
-
-# API keys (contains secrets)
+# API keys（含密钥，不提交）
 api_config.json
+
+# PyInstaller 运行时（除 scripts 子目录外）
+_internal/PyQt6/
+_internal/certifi/
+_internal/charset_normalizer/
+_internal/cryptography/
+_internal/cryptography-49.0.0.dist-info/
+_internal/setuptools/
+_internal/*.dll
+_internal/*.pyd
+_internal/*.zip
+_internal/*.dll
+
+# tmp
+tmp/
