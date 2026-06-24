@@ -2,11 +2,48 @@
 
 自动生成抖音口播数字人视频：抖音文案提取 → MiniMax 语音合成 → 婵镜数字人视频 → 成品输出。
 
-## 安装
+## 项目结构
 
-1. 下载 `installer_output/KouboAgent_v9.0_Setup.exe`
-2. 双击安装（自动创建桌面快捷方式）
-3. 运行程序，填入你的 API Key
+```
+dige_koubo/
+├── app.py                      # 主程序（PyQt6 GUI）
+├── requirements.txt            # Python 依赖
+├── build_windows.ps1           # Windows 编译脚本
+├── run_app.ps1                 # 开发运行脚本
+├── installer.iss               # Inno Setup 安装脚本
+├── api_config.template.json    # API Keys 模板
+├── dist/                       # 编译输出
+│   ├── KouboAgent_api_keys_v9.exe
+│   └── _internal/
+│       ├── scripts/            # 辅助脚本
+│       └── ...
+└── installer_output/           # 安装包（编译后生成）
+```
+
+## 快速开始（开发者）
+
+```powershell
+pip install -r requirements.txt
+python app.py
+```
+
+## 编译
+
+```powershell
+.\build_windows.ps1
+```
+
+## 制作安装包
+
+用 [Inno Setup 6](https://jrsoftware.org/isinfo.php) 编译：
+
+```
+iscc installer.iss
+```
+
+## 用户安装
+
+下载 Release 中的 `KouboAgent_v9.0_Setup.exe`，双击安装即可。
 
 ## API Keys 说明
 
@@ -17,10 +54,3 @@
 | `chanjing_app_id` | 婵镜数字人 | 婵镜平台 |
 | `chanjing_secret_key` | 婵镜数字人 | 婵镜平台 |
 | `zhiling_key` | 17知令抖音提取 | https://www.17zhiling.com |
-
-## 源码
-
-- `_internal/scripts/extract_douyin_copy.py` — 抖音文案提取
-- `_internal/scripts/minimax_synthesize.py` — MiniMax 语音合成
-- `installer.iss` — Inno Setup 安装脚本
-- `api_config.template.json` — 配置文件模板
